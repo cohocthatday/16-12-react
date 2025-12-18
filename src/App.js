@@ -40,10 +40,14 @@ function App() {
         <div className="user-list">
           {users.map((user) => (
             <div className="user-card" key={user.id}>
-              <h3>{user.name}</h3>
+              <h3>Name: {user.name}</h3>
+              <p><b>Username:</b> {user.username}</p>
               <p><b>Email:</b> {user.email}</p>
               <p><b>Phone:</b> {user.phone}</p>
               <p><b>Company:</b> {user.company.name}</p>
+              <p><b>Email:</b> {user.email}</p>
+              <p><b>Website:</b> {user.website}</p>
+              <p><b>Address:</b> {user.address.street}, {user.address.suite}, {user.address.city}, {user.address.zipcode}, {user.address.geo.lat}, {user.address.geo.lng}</p>
             </div>
           ))}
         </div>
